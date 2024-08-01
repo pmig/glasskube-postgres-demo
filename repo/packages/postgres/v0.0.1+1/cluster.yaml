@@ -1,0 +1,15 @@
+kind: Cluster
+apiVersion: postgresql.cnpg.io/v1
+metadata:
+  name: postgres
+spec:
+  enableSuperuserAccess: false
+  instances: 2
+  bootstrap:
+    initdb:
+      database: postgres
+      owner: postgres
+  storage:
+    size: 2Gi
+  monitoring:
+    enablePodMonitor: true

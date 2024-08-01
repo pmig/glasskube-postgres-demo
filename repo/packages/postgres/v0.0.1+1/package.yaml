@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://glasskube.dev/schemas/v1/package-manifest.json
+
+name: postgres
+scope: Namespaced
+shortDescription: Production-ready PostgreSQL database
+longDescription: >
+  Using cloud native PG
+iconUrl: https://avatars.githubusercontent.com/u/177543
+defaultNamespace: postgres
+dependencies:
+  - name: "cloudnative-pg"
+manifests:
+  - https://pmig.github.io/glasskube-postgres-demo/packages/postgres/v0.0.1+1/cluster.yaml
+valueDefinitions:
+  replicas:
+    type: number
+    defaultValue: 2
+    metadata:
+      description: >
+        Number of replicas
+    constraints:
+      required: true
+      minLength: 1
+    targets:
+      - patch:
+          op: add
+          path: /spec/instances
+        resource:
+          apiGroup: postgresql.cnpg.io/v1
+          kind: Cluster
+          name: postgres
+          namespace: postgres
