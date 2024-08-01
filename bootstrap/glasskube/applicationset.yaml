@@ -8,7 +8,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
     - git:
-        repoURL: https://github.com/TODO/TODO # TODO put your own repo url here
+        repoURL: https://github.com/pmig/glasskube-postgres-demo
         revision: HEAD
         directories:
           - path: 'packages/*'
@@ -18,7 +18,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/TODO/TODO # TODO put your own repo url here
+        repoURL: https://github.com/pmig/glasskube-postgres-demo
         targetRevision: HEAD
         path: '{{.path.path}}'
       destination:
