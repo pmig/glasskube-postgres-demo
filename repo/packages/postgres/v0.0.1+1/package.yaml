@@ -25,6 +25,7 @@ valueDefinitions:
       - patch:
           op: add
           path: /spec/instances
+        valueTemplate: "{{ . }}"
         resource:
           apiGroup: postgresql.cnpg.io/v1
           kind: Cluster
