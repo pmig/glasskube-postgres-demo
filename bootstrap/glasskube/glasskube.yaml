@@ -10173,9 +10173,7 @@ kind: PackageRepository
 metadata:
   annotations:
     packages.glasskube.dev/default-repository: "true"
-  creationTimestamp: null
   name: glasskube
 spec:
   url: https://packages.dl.glasskube.dev/packages
-status: {}
 

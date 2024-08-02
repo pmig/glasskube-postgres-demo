@@ -10,7 +10,7 @@ defaultNamespace: postgres
 dependencies:
   - name: "cloudnative-pg"
 manifests:
-  - https://pmig.github.io/glasskube-postgres-demo/packages/postgres/v0.0.1+1/cluster.yaml
+  - https://pmig.github.io/glasskube-postgres-demo/repo/packages/postgres/v0.0.1+1/cluster.yaml
 valueDefinitions:
   replicas:
     type: number
