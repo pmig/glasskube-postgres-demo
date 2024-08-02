@@ -31,3 +31,27 @@ valueDefinitions:
           kind: Cluster
           name: postgres
           namespace: postgres
+  memoryLimit:
+    type: text
+    defaultValue: "1Gi"
+    metadata:
+      description: >
+        Memory Limit
+    targets: []
+    constraints:
+      required: false
+      minLength: 1
+  CPULimit:
+    type: text
+    defaultValue: "2"
+    metadata:
+      description: >
+        CPU Limit Limit
+    targets: []
+    constraints:
+      required: false
+      minLength: 1
+  autoscale:
+    type: boolean
+    targets: []
+    defaultValue: "false"
