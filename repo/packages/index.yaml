@@ -2,4 +2,5 @@ packages:
   - iconUrl: https://avatars.githubusercontent.com/u/177543
     latestVersion: v0.0.1+1
     name: postgres
+    scope: Namespaced
     shortDescription: Production-ready PostgreSQL database
